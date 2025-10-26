@@ -39,7 +39,7 @@ const TalentoHumanoMap = ({ data }: { data: any[] }) => {
     <div className="w-full h-[400px] rounded-lg overflow-hidden mt-6">
       <MapContainer
         center={position}
-        zoom={6}
+        zoom={3}
         scrollWheelZoom={false}
         className="h-full w-full z-0"
       >
