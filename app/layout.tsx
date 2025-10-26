@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeModeScript } from "flowbite-react";
+import Navbar from "@/app/components/layout/navbar";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,9 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <ThemeModeScript />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900`}
       >
+        <Navbar />  
         {children}
       </body>
     </html>
